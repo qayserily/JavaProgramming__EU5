@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry excluding="live_review_sections/|daily_videos/" kind="src" path="src"/>
+	<classpathentry kind="src" path="src/daily_videos"/>
+	<classpathentry kind="src" path="src/live_review_sections"/>
+	<classpathentry kind="output" path="out/production/JavaProgramming_EU5"/>
+</classpath>

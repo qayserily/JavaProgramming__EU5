@@ -1,0 +1,183 @@
+ABSTRACTION
+*Focus on the essential
+*Ignore the irrelevant
+*Ignore the unimportant
+abstract class/interfaces we will learn
+***************************************************************************************************
+ABSTRACT CLASS
+** does not have a body , only signature
+
+Abstraction : is concentrating on essential/important things and not worry about details
+			  is concentrating on name of the action / behaviour , without thinking implementation
+			  can be done in 2 ways : 1-abstract Classes
+			  						  2-Interface
+			  helps with "organixing the code","reusing the code" , "less duplicate code"
+** Can we instantiate abstract class?
+No we can not create object from abstract class
+
+public abstract class browser()
+Browser browser = new Browser(); // error
+
+What is abstract method?
+	- is a method without body/implemantation. Can be placed in abstract class or interface.
+
+public abstract class browser(){
+	public abstract void navigate(String url);
+	public abstract void displayWebPage();
+}
+
+Where do you add implementation ?
+	- is added in first concrete class
+	- While adding implementation , all overriding rules should be followed
+
+public class Netscape extends Browser{
+	public void navigate(String url){
+	//implementation
+	}
+	public void displayWebPage(){
+	//implementation
+	}
+}
+
+Can we add non-abstract method in abstract class?
+	- Yes we can . Abstract class can have both abstract method and non-abstract method
+
+	public abstract class Browser{
+		public abstract void navigate(String url);
+		public void displayWebPage(){
+	//implementation
+	}
+		public void close(){
+		//code
+		}
+	}
+
+Is it mandatory for abstract class to have abstract method?
+	-No it is not. Abstract class can have  abstract method.
+
+public abstract class Browser{
+	public void close(){
+		//code
+		}
+	}
+
+** Can we add constructor in abstract class?
+	- yes we can
+
+** If we can not instantiate abstract class , how we can call the constructor?
+	- The constructor of abstract class can be called from a subclass using super keyword.
+
+public abstract class Browser{
+	public Browser(){
+		//code
+		}
+	}
+
+	public class Netscape extends Browser{
+
+		public Netscape(){
+			super();
+		}
+	}
+
+Can you add instance or static variables to abstract class?
+	-yes we can have instance or static variables in abstract class
+
+public abstract class Browser{
+	String name ;
+	static int id;
+}
+
+-	Variables can not be abstract.
+	
+	abstract int id ; // ERROR
+
+** Can you add instance or static init block?
+
+	- Yes we can.
+
+** Can an abstract class extend another abstract class ?
+
+	- Yes it can.
+
+	public abstract class A{}
+	public abstract class B extends A{}
+
+** Can an abstract class extend another non-abstract class ?
+
+	- Yes it can.
+
+	public class A{}
+	public abstract class B extends A{}
+
+** Can a class extends multiple abstract classes ? 
+
+	- No it can not
+
+	public abstract class A{}
+	public abstract class B{}
+
+	public class C extends A,B{} // ERROR
+
+** Can we add static method into abstract class ?
+
+	- Yes we can.
+
+	public abstract class A{
+
+		public static void methodX(){
+
+		}
+	}
+
+** Can a method be abstract and final in abstract class?
+
+	public abstract class Browser{
+		public abstract final void navigate(String url) ; // ERROR
+
+		public void displayWebPage(){
+
+		}
+	}
+
+** Can abstract method be protected, private and default
+
+	- private : No
+	- default : Yes
+	- protected : Yes
+
+** when an abstract class extends another abstract class , does it require to override/implement abstract methods from parent?
+
+	- No it does not require
+	- First concrete subclass is required to implement all abstract methods
+
+
+public abstract class Phone{
+	public abstract void call();
+}
+
+public abstract class MobilPhone extends Phone{
+	public abstract void text();
+}
+
+public Nokia extends MobilePhone{
+	public void call(){
+		//implementation
+	}
+	public void text{
+		//implementation
+	}
+}
+
+public Iphone extends MobilPhone{
+	public void call(){
+		//implementation
+	}
+	public void text{
+		//implementation
+	}
+}
+
+public IphoneX extends Iphone{
+	
+}

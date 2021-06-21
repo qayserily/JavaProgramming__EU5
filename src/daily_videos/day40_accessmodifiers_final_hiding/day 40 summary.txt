@@ -1,0 +1,10 @@
+day 40 summary
+private --> default --> protected --> public
+Hiding Static Methods
+	- We can not overrride static methods we can hide them
+	- The method in the child class must have the same signature as the same method in the parent class
+	- The method in the child class must be at least as accessible or more accesible than the method in the parent class
+	- If the method returns a value it must be same or subclass of the method in the parent class(covariant class)
+	- The method defined in the child class must be marked as static if it is marked as static in the parent class(method hiding)
+	- The method must not be marked as static in the child class if it is not marked as static in the parent class(Method Overriding)
+	
