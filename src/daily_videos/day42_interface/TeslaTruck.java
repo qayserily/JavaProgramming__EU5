@@ -5,4 +5,5 @@ public class TeslaTruck extends TeslaSemi{ //concrete class
         super(model, price, color, engineSize);
     }
 
+
 }
