@@ -1,0 +1,161 @@
+INTERFACE
+===================================================================================================
+* Contract between a class and outside world
+* Provide set of abstract methods
+* Most interfaces have a group of related empty methods
+* The class provides the behaviours included in the interface.
+
+** A class can extends another class and implements interface(s) same.
+
+** extends should come from implements keyword.
+
+ABSTRACT CLASS vs INTERFACE
+
+- abstract classes and interfaces are used to achieve abstraction in Java
+
+- We can not instantiate abstract classes and interfaces.
+
+	public abstract class Food{}
+	public interface Cookable{}
+
+	Food food = new Food();// error
+	Cookable cookable = new Cookable(); // error
+
+- We use abstract classes for StackTraceElementng foundation for sub classes.
+  It is normally a general
+
+- interfaces are used to add a feature to classes by providing abstract methods
+
+- Class can extends one class/abstract class.
+  Class can implements multiple interfaces.A
+
+  public Interface Cookable{}
+  public Interface Bakeable{}
+  public abstract class Food{}
+
+  public class Bread extends Food implements Bakeable{}
+  public class Patotoes extends Food implements Cookable , Bakeable{}
+
+- Methods
+
+	- abstract classes can have abstract and non-abstract methods.
+	- interfaces can have abstract , default  and static methods.
+	- concrete class is responsible for providing implementation.
+
+	public abstract class Food{
+		public abstract void eat(); // void eat(); - > ERROR
+		public void serve(){ //instance method
+			//code
+		}
+
+		public static void buy(){ //static method
+
+		}
+	}
+
+	public Interface Cookable{
+		public abstract void cook();
+
+		void store(); // public abstract
+	}
+
+	public Interface Bakeable{
+		public default void bakeInOven(){
+			//code
+		}
+		public static void bake(String str){
+			//code
+		}
+	}
+
+	public class Bread extends Food implements Bakeable{
+
+		@Override
+		public void eat(){
+
+		}
+	}
+
+	public class Patotoes extends Food implements Cookable,Bakeable{
+
+	}
+
+- Variables
+
+	- Abstract classes can have instance , static and final Variables
+	- Interfaces can only have "public static final" Variables
+
+	public abstract class Food{
+
+		String foodName ;
+		public staticint foodAmount ;
+		public final boolean SPICY = true ;
+	}
+
+	public Interface Cookable{
+		public static final String ACTION = "Cook";
+
+		boolean CAN_BE_COOKED = true; // public static final boolean CAN_BE_COOKED = true;
+	}
+
+- Constructor
+
+	- Abstract classes can have Constructors.
+	- Interfaces can not have Constructors.
+
+	public abstract class Food{
+		String name ;
+		public Food(String name){
+			this.name = name ;
+		}
+
+		public Food(){
+			this.name = name;
+		}
+	}
+
+	public Interface Cookable{
+		// We can not add constructor
+	}
+
+	public class Pizza extends Food{
+		public Pizza(){
+			super("Pasta");
+		}
+	}
+
+- Access Modifiers
+
+	- Abstract classes can use all Access Modifiers with Variables and methods
+	- Interfaces can only use public Access Modifiers
+
+	(Java-11 private final available too - DONT WORRY)
+
+	public abstract class Food{
+		public String name ; 
+		protected int quantity ;
+		boolean isSpicy;
+		private boolean isTasty;
+	}
+
+	public Interface Cookable{
+		public static final String ACTION = "Cook";
+	}
+
+	- Inheritance
+
+		- Abstract classes can extend a single abstract or non - abstract class and 
+		  implement interfaces
+		- interfaces can extend multiple interfaces
+		- Interfaces support multiple Inheritance
+		- Interfaces can not extend classes
+
+		public abstract class Food{}
+		public Interface Fryable{}
+		public Interface Grillable{}
+
+		public Cookable extends Fryable,Grillable{}
+
+		public abstract class Soup extends Food{}
+
+	THE END.....
