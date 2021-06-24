@@ -1,5 +1,7 @@
 package live_review_sections.week12;
 
+import live_review_sections.week11.Rectangle;
+
 public class ShapeObject {
     public static void main(String[] args) {
         //Shape shape1 = new Shape("Shape") // cannot create object from abstract class

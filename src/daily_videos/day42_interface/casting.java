@@ -1,6 +1,6 @@
 
 
-Casting
+/*Casting
 
 public class A{
 	public void methodA(){}
@@ -90,7 +90,7 @@ an.speak();
 
 
 
-
+*/
 
 
 

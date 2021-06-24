@@ -1,6 +1,6 @@
 package live_review_sections.week11;
 
-public class Square extends Shape{
+/*public class Square extends Shape{
 
     public double side;
 
@@ -19,3 +19,4 @@ public class Square extends Shape{
         return side * 4 ;
     }
 }
+*/

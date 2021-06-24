@@ -1,6 +1,6 @@
 package live_review_sections.week12;
 
-public final class Rectangle extends Shape{
+/*public final class Rectangle extends Shape{
     public double l, w;
 
     public Rectangle( double l, double w) {
@@ -21,4 +21,4 @@ public final class Rectangle extends Shape{
 
 
 
-}
+}*/

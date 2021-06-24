@@ -1,6 +1,6 @@
 package daily_videos.day41_abstraction;
 
-public class Dog extends Animal{
+/*public class Dog extends Animal{
     public Dog(String name) {
         super(name);
     }
@@ -14,4 +14,5 @@ public class Dog extends Animal{
     public void breathe() {
         System.out.println("Dog is breathing");
     }
-}
+}*/
+
