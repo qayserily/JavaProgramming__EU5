@@ -1,0 +1,75 @@
+POLYMORPHISM
+
+primitive data type =  value
+int x 				=  5 ;
+
+Referance Type 		RN  = Object type
+Animal           animal = new Animal();
+
+ParentClass/interface RN = ChildClass ;
+
+	public class Animal{}
+	public class Dog extends Animal{}
+	public class Bird extends Animal{}
+
+Animal animal = new Animal();
+Dog Dog = new Dog();
+Bird bird = new Bird();
+
+Animal obj = new Dog(); // you created object polymorphic way
+
+Animal obj2 = new Bird();
+
+PARENT/interface		driver  = new Chromedriver();
+WebDriver				driver  = new Chromedriver(); //polymorphism
+
+Casting
+
+public class A{
+	public void methodA(){}
+}
+
+public class B extends A{
+	public void method(){}
+}
+
+A obj = new B();
+obj.methodA();
+
+B obj2 = (B) obj;
+obj2.methodA();
+obj2.methodB();
+
+public class C extends B{
+	public void methodC(){}
+}
+
+B obj2 =(B) obj;
+obj2.methodA();
+obj2.methodB();
+
+C obj3 = (C) obj;
+obj3.methodA();
+obj3.methodB();
+obj3.methodC();
+
+public class Animal{
+	public void Speak(){}
+}
+
+public class Goat extends Animal{
+	public void eat(String str){}
+}
+
+Animal an = new Goat();
+
+1) an.eat("Grass") ; // ERROR
+
+Goat gt = (Goat) an ;
+gt.eat("Grass") ; 
+
+2) ( (Goat) an).eat("Grass");
+
+((TakeScreenShot)driver).takeScreenShot("image.png");
+
+THE END ....

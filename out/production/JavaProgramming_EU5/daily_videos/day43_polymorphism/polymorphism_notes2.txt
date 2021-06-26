@@ -1,0 +1,62 @@
+PolyMorphism Extra
+
+String browser = "Chrome";
+if(browser.equals("Chrome")){
+	ChromeDriver driver = new ChromeDriver();
+}else if {
+	FirefoxDriver driver = new FirefoxDriver();
+}
+
+poly morphism = many form 
+
+driver...click on sign in
+driver...enter username
+driver...enter password
+...
+
+Primitive Type              VN          value
+int 						x     =		  5
+
+Reference Type              RN 	  = 	Object Type
+Animal						animal		new Animal();
+
+
+ParentClass/interface       RN    =		ChildClass;
+
+public class Animal{}   
+public class Dog extends Animal{}
+public class Bird extends Animal{}
+
+Animal animal = new Animal();
+Dog dog = new Dog();
+Bird bird = new Bird();
+
+Animal obj = new Dog(); // you created object polymorpic way
+Animal obj2 = new Bird();
+
+(Parent/Interface)..WebDriver driver = new ChromeDriver();...WebDriver is a interface which Selenium provides for us 
+
+
+public interface WebDriver(){
+	void navigate (String URL);
+}
+
+public class ChromeDriver implements WebDriver{
+	//override navigate method
+	public void navigate (String URL){
+	//run everything in chromedriver
+	}
+
+}
+
+public class FirefoxDriver implements WebDriver{
+	//override navigate method
+	public void navigate (String URL){
+	//run everything in firefox
+	}
+
+}
+
+
+
+
