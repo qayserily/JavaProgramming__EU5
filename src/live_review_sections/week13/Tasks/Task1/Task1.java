@@ -1,4 +1,4 @@
-package live_review_sections.week13.Tasks;
+package live_review_sections.week13.Tasks.Task1;
 
 public class Task1 {
 }

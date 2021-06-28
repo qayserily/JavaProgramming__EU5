@@ -1,4 +1,4 @@
-package day17_classObjects_Part2;
+/*package day17_classObjects_Part2;
 
 public class CarObjects {
 
@@ -28,4 +28,4 @@ public class CarObjects {
 		
 	}
 
-}
+}*/
