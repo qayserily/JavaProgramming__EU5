@@ -1,0 +1,60 @@
+Error Handling/Handling Exception
+ - each error and Exception is an Object
+
+ try{
+ 	A 
+ 	B 
+ 	C 
+
+ }catch(Exception e){
+ 	D
+ }
+
+ J 
+
+1- There is no any problem/Exception : A ,B ,C and J 
+2- A triggered Exception/Error : D and J 
+3- B triggered Exception/Error : A , D and J 
+4- C triggered Exception/Error : A , B , D and J
+
+finally block 
+try{
+//code
+}catch (Exception e) {
+//code	
+}finally{
+// code that runs always
+}
+
+finally block always runs except in 2 situation :
+
+	- System.exit(0);
+	- JVM crash
+==================================================================
+A
+try{
+	B 
+	C 
+}catch(Exception e){
+	D 
+	E 
+}finally{
+	F 
+}
+K 
+
+1- No error : A,B,C,F and K 
+2- A has error : Nothing
+3- C has a problem : A , B , D , F and K 
+4- C and D have error : A , B , F and executation stops,shows error
+
+Checked and Unchecked Exceptions
+
+	Checked Exception
+		- Handle: try catch finally
+		- Declare : throws declaration
+
+throw Clause 
+
+
+
