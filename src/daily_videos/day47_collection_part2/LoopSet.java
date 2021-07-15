@@ -1,4 +1,4 @@
-package daily_videos.day47_collections_part2;
+package daily_videos.day47_collection_part2;
 
 import java.util.HashSet;
 import java.util.Set;
